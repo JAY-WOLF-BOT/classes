@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="comp"></p>
+    <p id="static"></p>
+    <script>
+       class company{
+        constructor(name){
+            this.companyname = name;
+        }
+
+        static hello(){
+            return "hello";
+        }
+
+        present(){
+            return "The name of the company is " + this.companyname;
+        }
+
+       }
+
+       class location extends company{
+            constructor(name,site){
+              super(name);
+              this.place = site;
+            }
+
+            show(){
+                return present() + "the location of the company is " + this.place;
+            }
+        }
+
+        let myloctaion = new location("carrian rentals","Accra");
+            document.getElementById("comp").innerHTML = mylocation.show();
+
+       document.getElementById("static").innerHTML = company.hello();     
+    </script>
+</body>
+</html>
